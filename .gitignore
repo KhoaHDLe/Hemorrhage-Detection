@@ -1,3 +1,4 @@
 *.zip
+*.csv
 /stage_1_test_images
 /stage_2_train_images
