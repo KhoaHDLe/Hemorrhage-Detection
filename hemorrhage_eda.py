@@ -9,10 +9,10 @@ import os
 
 rcParams['figure.figsize'] = 11.7, 8.27
 
-train_dir = "E:/4.0 Projects/stage_1_train_images"
-test_dir = "E:/4.0 Projects/stage_1_test_images"
+train_dir = "E:/4.0 Projects/Hemorrhage-Detection/Hemorrhage-Detection-Data/stage_1_train_images"
+test_dir = "E:/4.0 Projects/Hemorrhage-Detection/Hemorrhage-Detection-Data-Data/stage_1_test_images"
 
-train_csv = pd.read_csv("E:/4.0 Projects/stage_1_train.csv")
+train_csv = pd.read_csv("E:/4.0 Projects/Hemorrhage-Detection/stage_1_train.csv")
 
 print(train_csv.head(10))
 
