@@ -18,8 +18,8 @@ __Insights__
 
 __Definition__
 
-Window - How many Houndsfield units within 256 shades of grey
-Level - Where is the window is centered
+- Window - How many Houndsfield units within 256 shades of grey
+- Level - Where is the window is centered
 
 __Hounsfield Units__
 
