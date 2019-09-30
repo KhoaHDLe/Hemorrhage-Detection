@@ -2,7 +2,7 @@
 
 __Our goal__
 
-> Identify acute intracranial hemorrhage and its sub-types. We are asked to predict the occurence and the subtype of intracranial hemorrhage. For this purpose we have to make 6 decisions per image: 5 subtypes and if there is an occurence (any). We can clearly see that we have to make several predictions for one image id:
+Identify acute intracranial hemorrhage and its sub-types. We are asked to predict the occurence and the subtype of intracranial hemorrhage. For this purpose we have to make 6 decisions per image: 5 subtypes and if there is an occurence (any). We can clearly see that we have to make several predictions for one image id:
 - Epidural
 - Subdural
 - Subarachnoid
