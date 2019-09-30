@@ -12,6 +12,6 @@ __Our goal__
 
 __Insights__
 
-. The first image already shows that we will have much more zero occurences than positive target values.
-. Going into details of each subtype we can see that we have to deal with high class imbalance.
-. Epidural is the worst case. For this type we only have a few (< 1%) of positive occurrences. It will be difficult to train a model that - is robust enough and does not tend to overfit.
+- The first image already shows that we will have much more zero occurences than positive target values.
+- Going into details of each subtype we can see that we have to deal with high class imbalance.
+- Epidural is the worst case. For this type we only have a few (< 1%) of positive occurrences. It will be difficult to train a model that - is robust enough and does not tend to overfit.
