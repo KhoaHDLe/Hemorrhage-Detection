@@ -16,6 +16,13 @@ __Insights__
 - Going into details of each subtype we can see that we have to deal with high class imbalance.
 - Epidural is the worst case. For this type we only have a few (< 1%) of positive occurrences. It will be difficult to train a model that - is robust enough and does not tend to overfit.
 
+![I1-2019-09-30_22-53-19](https://user-images.githubusercontent.com/50160174/65880776-b4100a00-e3d5-11e9-8fc7-2fec1ac1cdb0.jpg)
+![I2-2019-09-30_22-55-05](https://user-images.githubusercontent.com/50160174/65880778-b4100a00-e3d5-11e9-8f37-837c7e9cf997.jpg)
+![I2-2019-09-30_22-55-14](https://user-images.githubusercontent.com/50160174/65880779-b4a8a080-e3d5-11e9-9b32-b21800402c6a.jpg)
+![I3-2019-09-30_22-54-59](https://user-images.githubusercontent.com/50160174/65880783-b5d9cd80-e3d5-11e9-9813-83714098be4b.jpg)
+![I4-2019-09-30_22-54-50](https://user-images.githubusercontent.com/50160174/65880784-b5d9cd80-e3d5-11e9-9925-e4a141fafe6f.jpg)
+![I5-2019-09-30_22-54-37](https://user-images.githubusercontent.com/50160174/65880785-b5d9cd80-e3d5-11e9-83fd-d9c56b5cd516.jpg)
+
 __Definition__
 
 - Window - How many Houndsfield units within 256 shades of grey
