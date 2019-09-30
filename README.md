@@ -21,7 +21,7 @@ __Definition__
 Window - How many Houndsfield units within 256 shades of grey
 Level - Where is the window is centered
 
-__Definition__
+__Hounsfield Units__
 
 - that hounsfield units are a measurement to describe radiodensity.
 - different tissues have different HUs.
