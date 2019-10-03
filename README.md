@@ -30,11 +30,11 @@ __Definition__
 
 There are at least 5 windows that a radiologist goes through for each scan!
 
-Brain Matter window : W:80 L:40
-Blood/subdural window: W:130-300 L:50-100
-Soft tissue window: W:350–400 L:20–60
-Bone window: W:2800 L:600
-Grey-white differentiation window: W:8 L:32 or W:40 L:40
+- Brain Matter window : W:80 L:40
+- Blood/subdural window: W:130-300 L:50-100
+- Soft tissue window: W:350–400 L:20–60
+- Bone window: W:2800 L:600
+- Grey-white differentiation window: W:8 L:32 or W:40 L:40
 
 __Hounsfield Units__
 
