@@ -60,7 +60,6 @@ print('{:.1f} % of images have at least one type of Hemorrhage.'.format((value_d
 type_dict = train_csv[train_csv['Label'] == 1].Type.value_counts().to_dict()
 
 fig, ax = plt.subplots(figsize=(18, 6))
-
 sns.countplot(x="Type", hue="Label", data=train_csv, palette="ch:.25")
 
 ax.set_title("Count of Hemorrhages by Type")
@@ -71,16 +70,13 @@ ax.set_ylabel("Count")
 
 for p in ax.patches:
     ax.annotate(p.get_height(), (p.get_x() + 0.12, p.get_height() + 5000), fontsize=8)
-
 plt.show()
 
 # fig, ax = plt.subplots(figsize = (18,6))
-
 # sns.countplot(x=list(type_dict.keys()), y=list(type_dict.values()))
 # ax.set_title("the number of different type of Hemorrhage")
 # ax.set_xlabel("type")
 # plt.show()
-
 
 for index, count in type_dict.items():
     print('There are {} instances of {} hemorrage types in the train data set'.format(count, index))
