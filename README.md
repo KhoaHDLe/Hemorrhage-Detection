@@ -1,10 +1,11 @@
 ## Hemorrhage-Detection
 
-Our goal is to identify and predict the presense of acute intracranial hemorrhages and its sub-types in CT images.  
+Our goal is to identify and predict the presense of acute intracranial hemorrhages and its sub-types in CT images. 
 
-The dataset consists of 5 subtypes and an "any" type (at least one occurance of any of the hemorrhages). A yes/no classification is allocated to each of the 6 labels. 
+The dataset consists of 5 subtypes and an "any" type (at least one occurance of any of the hemorrhages). 
+A yes/no classification is allocated to each of the 6 labels for the 674,258 images in the train data set and 78,545 images in the test data set.  
 
-This becomes 2-class classification (yes/no classification) for each of the image ID:
+The six image 'Types' in the dataset are listed below:
 
 - Epidural
 - Subdural
@@ -15,7 +16,12 @@ This becomes 2-class classification (yes/no classification) for each of the imag
 
 ![image](https://user-images.githubusercontent.com/50160174/66179970-58cc6900-e6ae-11e9-8e5e-0dc7483c0d75.png)
 
-
+There are 2761 instances of epidural hemorrage types in the train data set
+There are 32,564 instances of intraparenchymal hemorrage types in the train data set
+There are 32,122 instances of subarachnoid hemorrage types in the train data set
+There are 42,496 instances of subdural hemorrage types in the train data set
+There are 23,766 instances of intraventricular hemorrage types in the train data set
+There are 97,103 instances of any hemorrage types in the train data set
 
 
 
