@@ -1,8 +1,11 @@
 ## Hemorrhage-Detection
 
-__Our goal__
+Our goal is to identify and predict the presense of acute intracranial hemorrhages and its sub-types in CT images.  
 
-Identify acute intracranial hemorrhage and its sub-types. We are asked to predict the occurence and the subtype of intracranial hemorrhage. For this purpose we have to make 6 decisions per image: 5 subtypes and if there is an occurence (any). We can clearly see that we have to make several predictions for one image id:
+The dataset consists of 5 subtypes and an "any" type (at least one occurance of any of the hemorrhages). As a result, a yes/no classification is allocated to each of the 6 labels. 
+
+This becomes 2-class classification (yes/no classification) for each of the image ID:
+
 - Epidural
 - Subdural
 - Subarachnoid
