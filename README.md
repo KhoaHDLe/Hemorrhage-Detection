@@ -19,11 +19,10 @@ The six image 'Types' in the dataset are listed below:
 There are 2,761 (0.41%) instances of epidural hemorrage, 23,766 (3.65%) instances of intraventricular hemorrage, 32,122 (5.00%) instances of subarachnoid hemorrage, 32,564 (5.07%) instances of intraparenchymal hemorrage, 42,496 (6.73%) instances of subdural hemorrage 
 and 97,103 (16.82%) instances of any hemorrage types in the train data set. 
 
-__Insights__
+The low percentage of positive occurances (classificaiton = 1) indicates a high class imbalance in the training dataset which could lead to overfitting.   
 
-- The first image already shows that we will have much more zero occurences than positive target values.
-- Going into details of each subtype we can see that we have to deal with high class imbalance.
-- Epidural is the worst case. For this type we only have a few (< 1%) of positive occurrences. It will be difficult to train a model that - is robust enough and does not tend to overfit.
+
+
 
 ![I1-2019-09-30_22-53-19](https://user-images.githubusercontent.com/50160174/65880776-b4100a00-e3d5-11e9-8fc7-2fec1ac1cdb0.jpg)
 ![I2-2019-09-30_22-55-05](https://user-images.githubusercontent.com/50160174/65880778-b4100a00-e3d5-11e9-8f37-837c7e9cf997.jpg)
