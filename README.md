@@ -23,7 +23,7 @@ The low percentage of positive occurances (classificaiton = 1) indicates a high 
 
 ### Definition
 
-Sample images with different diagnosis are shown in figure 1.0 to 1.4. The visualisation incorporates the transformation from pixel to Houndsfield units (HU). 
+Sample images with different diagnosis are shown in figure 1.0 to 1.4. The visualisation incorporates the transformation from pixel to Houndsfield units (HU) with a center (level) of 40 and a width (window) of 80 HU units.  
 
 Figure 1.0
 ![I2-2019-09-30_22-55-05](https://user-images.githubusercontent.com/50160174/65880778-b4100a00-e3d5-11e9-8f37-837c7e9cf997.jpg)
