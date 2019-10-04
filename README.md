@@ -21,8 +21,7 @@ and 97,103 (16.82%) instances of any hemorrage types in the train data set.
 
 The low percentage of positive occurances (classificaiton = 1) indicates a high class imbalance in the training dataset which could lead to overfitting.   
 
-
-
+### Definition
 
 ![I1-2019-09-30_22-53-19](https://user-images.githubusercontent.com/50160174/65880776-b4100a00-e3d5-11e9-8fc7-2fec1ac1cdb0.jpg)
 ![I2-2019-09-30_22-55-05](https://user-images.githubusercontent.com/50160174/65880778-b4100a00-e3d5-11e9-8f37-837c7e9cf997.jpg)
@@ -31,7 +30,7 @@ The low percentage of positive occurances (classificaiton = 1) indicates a high 
 ![I4-2019-09-30_22-54-50](https://user-images.githubusercontent.com/50160174/65880784-b5d9cd80-e3d5-11e9-9925-e4a141fafe6f.jpg)
 ![I5-2019-09-30_22-54-37](https://user-images.githubusercontent.com/50160174/65880785-b5d9cd80-e3d5-11e9-83fd-d9c56b5cd516.jpg)
 
-__Definition__
+### Background
 
 - Window - How many Houndsfield units within 256 shades of grey
 - Level - Where is the window is centered
@@ -43,8 +42,6 @@ There are at least 5 windows that a radiologist goes through for each scan!
 - Soft tissue window: W:350–400 L:20–60
 - Bone window: W:2800 L:600
 - Grey-white differentiation window: W:8 L:32 or W:40 L:40
-
-__Hounsfield Units__
 
 - that hounsfield units are a measurement to describe radiodensity.
 - different tissues have different HUs.
