@@ -1,9 +1,9 @@
 ## Hemorrhage-Detection
 
-Our goal is to identify and predict the presense of acute intracranial hemorrhages and its sub-types in CT images. 
+Our goal is to identify and predict the presence of acute Intracranial Hemorrhage (HI) sub-types in Computed Tomography (CT) images. 
 
-The dataset consists of 5 subtypes and an "any" type (at least one occurance of any of the hemorrhages). 
-A yes/no classification is allocated to each of the 6 labels for the 674,258 images in the train data set and 78,545 images in the test data set.  
+The dataset consists of five (5) subtypes and an "any" type (at least one occurance of any of the hemorrhages). 
+A yes/no classification is allocated to each of the six (6) labels for the 674,258 images in the train data set and 78,545 images in the test data set.  
 
 The six image 'Types' in the dataset are listed below:
 
