@@ -36,28 +36,37 @@ __Figure 1.3__
 __Figure 1.4__
 ![I5-2019-09-30_22-54-37](https://user-images.githubusercontent.com/50160174/65880785-b5d9cd80-e3d5-11e9-83fd-d9c56b5cd516.jpg)
 
+## Background
+### Houndsfield Units
+
+	- Window - How many Houndsfield units within 256 shades of grey
+	- Level - Where is the window is centered
+
+	There are at least 5 windows that a radiologist goes through for each scan!
+	- Brain Matter window : W:80 L:40
+	- Blood/subdural window: W:130-300 L:50-100
+	- Soft tissue window: W:350–400 L:20–60
+	- Bone window: W:2800 L:600
+	- Grey-white differentiation window: W:8 L:32 or W:40 L:40
+
+	- that hounsfield units are a measurement to describe radiodensity.
+	- different tissues have different HUs.
+	- Our eye can only detect ~6% change in greyscale (16 shades of grey).
+	- Given 2000 HU of one image (-1000 to 1000), this means that 1 greyscale covers 8 HUs.
+	- Consequently there can happen a change of 120 HUs unit our eye is able to detect an intensity change in the image.
+	- The example of a hemorrhage in the brain shows relevant HUs in the range of 8-70. We won't be able to see important changes in the 
+	- intensity to detect the hemorrhage.
+	- This is the reason why we have to focus 256 shades of grey into a small range/window of HU units. (WINDOW)
+	- The level means where this window is centered.
+
+
+
+
+
+
+
 ### Background
 
-- Window - How many Houndsfield units within 256 shades of grey
-- Level - Where is the window is centered
-
-There are at least 5 windows that a radiologist goes through for each scan!
-
-- Brain Matter window : W:80 L:40
-- Blood/subdural window: W:130-300 L:50-100
-- Soft tissue window: W:350–400 L:20–60
-- Bone window: W:2800 L:600
-- Grey-white differentiation window: W:8 L:32 or W:40 L:40
-
-- that hounsfield units are a measurement to describe radiodensity.
-- different tissues have different HUs.
-- Our eye can only detect ~6% change in greyscale (16 shades of grey).
-- Given 2000 HU of one image (-1000 to 1000), this means that 1 greyscale covers 8 HUs.
-- Consequently there can happen a change of 120 HUs unit our eye is able to detect an intensity change in the image.
-- The example of a hemorrhage in the brain shows relevant HUs in the range of 8-70. We won't be able to see important changes in the 
-- intensity to detect the hemorrhage.
-- This is the reason why we have to focus 256 shades of grey into a small range/window of HU units. (WINDOW)
-- The level means where this window is centered.
 
 
 
