@@ -13,6 +13,12 @@ This becomes 2-class classification (yes/no classification) for each of the imag
 - Intraventricular
 - Any - this one indicates that at least one subtype is present, hence it tells us if the patient has IH or not.
 
+![image](https://user-images.githubusercontent.com/50160174/66179970-58cc6900-e6ae-11e9-8e5e-0dc7483c0d75.png)
+
+
+
+
+
 __Insights__
 
 - The first image already shows that we will have much more zero occurences than positive target values.
