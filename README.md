@@ -23,11 +23,17 @@ The low percentage of positive occurances (classificaiton = 1) indicates a high 
 
 ### Definition
 
-![I1-2019-09-30_22-53-19](https://user-images.githubusercontent.com/50160174/65880776-b4100a00-e3d5-11e9-8fc7-2fec1ac1cdb0.jpg)
+Sample images with different diagnosis are shown in figure 1.0 to 1.4. The visualisation incorporates the transformation from pixel to Houndsfield units (HU). 
+
+Figure 1.0
 ![I2-2019-09-30_22-55-05](https://user-images.githubusercontent.com/50160174/65880778-b4100a00-e3d5-11e9-8f37-837c7e9cf997.jpg)
+Figure 1.1
 ![I2-2019-09-30_22-55-14](https://user-images.githubusercontent.com/50160174/65880779-b4a8a080-e3d5-11e9-9b32-b21800402c6a.jpg)
+Figure 1.2
 ![I3-2019-09-30_22-54-59](https://user-images.githubusercontent.com/50160174/65880783-b5d9cd80-e3d5-11e9-9813-83714098be4b.jpg)
+Figure 1.3
 ![I4-2019-09-30_22-54-50](https://user-images.githubusercontent.com/50160174/65880784-b5d9cd80-e3d5-11e9-9925-e4a141fafe6f.jpg)
+Figure 1.4
 ![I5-2019-09-30_22-54-37](https://user-images.githubusercontent.com/50160174/65880785-b5d9cd80-e3d5-11e9-83fd-d9c56b5cd516.jpg)
 
 ### Background
