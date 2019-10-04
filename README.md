@@ -61,12 +61,3 @@ __Figure 1.4__
 
 
 
-
-
-
-
-### Background
-
-
-
-
