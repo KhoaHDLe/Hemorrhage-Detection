@@ -21,7 +21,7 @@ and 97,103 (16.82%) instances of any hemorrage types.
 
 The low percentage of positive occurances (classificaiton = 1) indicates a high class imbalance in the training dataset which could lead to overfitting.   
 
-### Definition
+### Visualisation
 
 Sample images with different diagnosis are shown in figure 1.0 to 1.4. The visualisation incorporates the transformation from pixel to Houndsfield units (HU) with a center (level) of 40 and a width (window) of 80 HU units.  
 
