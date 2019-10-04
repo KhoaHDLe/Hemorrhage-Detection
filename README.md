@@ -2,7 +2,7 @@
 
 Our goal is to identify and predict the presense of acute intracranial hemorrhages and its sub-types in CT images.  
 
-The dataset consists of 5 subtypes and an "any" type (at least one occurance of any of the hemorrhages). As a result, a yes/no classification is allocated to each of the 6 labels. 
+The dataset consists of 5 subtypes and an "any" type (at least one occurance of any of the hemorrhages). A yes/no classification is allocated to each of the 6 labels. 
 
 This becomes 2-class classification (yes/no classification) for each of the image ID:
 
