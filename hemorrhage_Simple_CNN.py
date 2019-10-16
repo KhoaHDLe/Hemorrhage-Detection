@@ -11,6 +11,10 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
 from tensorflow.keras.layers import Conv2D, MaxPooling2D
+
+from keras.optimizers import RMSprop, Adam
+from keras.applications import VGG19, VGG16, ResNet50
+
 from keras.utils import to_categorical
 from keras.callbacks import ModelCheckpoint
 from tqdm import tqdm
@@ -23,12 +27,6 @@ import matplotlib.pyplot as plt
 import keras
 from tensorflow.python.keras.utils.data_utils import Sequence
 from tensorflow.python.ops import array_ops
-
-batch_size = 32
-valication_ratio = 0.1
-sample_size = 2000
-epochs = 3
-img_size = 512
 
 train_csv = pd.read_csv("E:/4.0 Projects/Hemorrhage-Detection/stage_1_train.csv")
 train_csv['Type'] = train_csv['ID'].apply(lambda x: x.split('_')[2])
@@ -55,11 +53,51 @@ y_values = pd.DataFrame(train_sample, columns=["any", "epidural", "intraventricu
 print(y_values.head(10))
 print(type(y_values))
 
+# ########### CREATE A DATA GENERATOR ###########
 
-########### CREATE A DATA GENERATOR ###########
+# gen = ImageDataGenerator(
+#     rotation_range=20,
+#     width_shift_range=0.1,
+#     height_shift_range=0.1,
+#     shear_range=0.1,
+#     zoom_range=0.2,
+#     horizontal_flip=True,
+#     vertical_flip=True,
+# )
+
+# train_generator = gen.flow_from_dataframe(
+#     train_path,
+#     target_size=img_size,
+#     shuffle=True,
+#     batch_size=batch_size,
+# )
+
+# ########### Design model ###########
+
+# model = model()
+
+# model = Sequential()
+# model.add(conv_base)
+# model.add(Flatten())
+# model.add(Dense(64, activation='relu'))
+# model.add(Dropout(0.5))
+# model.add(Dense(6, activation='sigmoid'))
 
 
-########### Design model ###########
+# ########### Compile model ###########
+
+# model.compile(optimizer = RMSprop(lr=1e-5),
+#               loss='binary_crossentropy',
+#               metrics=['binary_accuracy'])
+# model.summary()
 
 
-########### Train model on dataset ###########
+# ########### Train model on dataset ###########
+
+# history = model.fit_generator(
+#     train_generator,
+#     validation_data=valid_generator,
+#     epochs=epochs,
+#     steps_per_epoch=len(image_files) // batch_size,
+#     validation_steps=len(valid_image_files) // batch_size,
+# )
