@@ -7,7 +7,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import pydicom
+
 from keras import layers
+
 from keras.applications import DenseNet121
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import Callback, ModelCheckpoint
@@ -17,7 +19,6 @@ from keras.models import Sequential
 from keras.optimizers import Adam
 from tensorflow.python.ops import array_ops
 from tqdm import tqdm
-
 
 from keras import backend as K
 import tensorflow as tf
@@ -99,21 +100,32 @@ def save_and_resize(filenames, load_dir):
         resized = cv2.resize(img, (224, 224))
         res = cv2.imwrite(new_path, resized)
 
+        if not res:
+            print('Failed')
 
-save_and_resize(filenames=sample_files, load_dir=BASE_PATH + TRAIN_DIR)
+
+# save_and_resize(filenames=sample_files, load_dir=BASE_PATH + TRAIN_DIR)
 # save_and_resize(filenames=os.listdir(BASE_PATH + TEST_DIR), load_dir=BASE_PATH + TEST_DIR)
 
-BATCH_SIZE = 64
+BATCH_SIZE = 16
 
 
 def create_datagen():
-    return ImageDataGenerator(validation_split=0.15)
+    return ImageDataGenerator(
+        zoom_range=0.1,  # set range for random zoom
+        # set mode for filling points outside the input boundaries
+        fill_mode='constant',
+        cval=0.,  # value used for fill_mode = "constant"
+        horizontal_flip=True,  # randomly flip images
+        vertical_flip=True,  # randomly flip images,
+        validation_split=0.2
+    )
 
 
 def create_test_gen():
     return ImageDataGenerator().flow_from_dataframe(
         test_df,
-        directory='E://4.0 Projects/Hemorrhage-Detection/',
+        directory='E://4.0 Projects/Hemorrhage-Detection/save_and_resize',
         x_col='filename',
         class_mode=None,
         target_size=(224, 224),
@@ -125,11 +137,11 @@ def create_test_gen():
 def create_flow(datagen, subset):
     return datagen.flow_from_dataframe(
         pivot_df,
-        directory='E://4.0 Projects/Hemorrhage-Detection/',
+        directory='E://4.0 Projects/Hemorrhage-Detection/save_and_resize',
         x_col='filename',
         y_col=['any', 'epidural', 'intraparenchymal',
                'intraventricular', 'subarachnoid', 'subdural'],
-        class_mode='multi_output',
+        class_mode='other',
         target_size=(224, 224),
         batch_size=BATCH_SIZE,
         subset=subset
@@ -140,4 +152,66 @@ def create_flow(datagen, subset):
 data_generator = create_datagen()
 train_gen = create_flow(data_generator, 'training')
 val_gen = create_flow(data_generator, 'validation')
-# test_gen = create_test_gen()
+test_gen = create_test_gen()
+
+densenet = DenseNet121(
+    weights='E://4.0 Projects/Hemorrhage-Detection/DenseNet-BC-121-32-no-top.h5',
+    include_top=False,
+    input_shape=(224, 224, 3)
+)
+
+
+def build_model():
+    model = Sequential()
+    model.add(densenet)
+    model.add(layers.GlobalAveragePooling2D())
+    model.add(layers.Dropout(0.5))
+    model.add(layers.Dense(6, activation='sigmoid'))
+
+    model.compile(
+        loss='binary_crossentropy',
+        optimizer=Adam(lr=0.001),
+        metrics=['accuracy']
+    )
+
+    return model
+
+
+model = build_model()
+model.summary()
+
+checkpoint = ModelCheckpoint(
+    'model.h5',
+    monitor='val_loss',
+    verbose=0,
+    save_best_only=True,
+    save_weights_only=False,
+    mode='auto'
+)
+
+total_steps = sample_files.shape[0] / BATCH_SIZE
+
+history = model.fit_generator(
+    train_gen,
+    steps_per_epoch=total_steps * 0.80,
+    validation_data=val_gen,
+    validation_steps=total_steps * 0.2,
+    callbacks=[checkpoint],
+    epochs=11
+)
+
+with open('history.json', 'w') as f:
+    json.dump(history.history, f)
+
+history_df = pd.DataFrame(history.history)
+history_df[['loss', 'val_loss']].plot()
+history_df[['acc', 'val_acc']].plot()
+
+model.load_weights('model.h5')
+y_test = model.predict_generator(
+    test_gen,
+    steps=len(test_gen),
+    verbose=1
+)
+
+# test_df[['ID', 'Label']].head(10)
