@@ -46,8 +46,7 @@ np.random.seed(1749)
 sample_files = np.random.choice(os.listdir(BASE_PATH + TRAIN_DIR), 1000)
 sample_df = train_df[train_df.filename.apply(lambda x: x.replace('.png', '.dcm')).isin(sample_files)]
 
-pivot_df = sample_df[['Label', 'filename', 'type']].drop_duplicates().pivot(
-    index='filename', columns='type', values='Label').reset_index()
+pivot_df = sample_df[['Label', 'filename', 'type']].drop_duplicates().pivot(index='filename', columns='type', values='Label').reset_index()
 print(pivot_df.shape)
 print(pivot_df.head())
 
